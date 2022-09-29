@@ -17,4 +17,11 @@ const typeDefs = gql`
     }
     
     type Tag {
+        _id: ID
+        sport: String
+    }
+    
+    type Query {
+        users: [User]
+        items: [Item]
     }`
