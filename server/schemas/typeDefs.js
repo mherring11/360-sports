@@ -10,7 +10,7 @@ const typeDefs = gql`
     
     type Item {
         _id: ID
-        title: String
+        itemName: String
         description: String
         Condition: String
         tag: [Tag]
@@ -23,5 +23,7 @@ const typeDefs = gql`
     
     type Query {
         users: [User]
-        items: [Item]
+        user(username: String!): User
+        items(username: String!): [Item]
+        item(_id: ID!): Item
     }`
