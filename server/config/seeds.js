@@ -1,6 +1,7 @@
 const db = require('./connection');
 const { Tags, User } = require('../models');
 
+// properties can be altered to fit our final model setup Also need to add whatever other Models we end up with
 db.once('open', async () => {
 
     await User.deleteMany();
