@@ -8,51 +8,39 @@ db.once('open', async () => {
     await User.create(
         {
             username: 'Chopchop',
-            firstName: 'Edward',
-            lastName: 'Scissorhands',
             email: 'chopchopsnipsnip@landscaperpro.com',
             password: 'Password12345',
-            activities: [football, ultimate, basketball, running]
+            items: ['football cleats', 'basketball']
         },
         {
             username: 'dutchblitz',
-            firstName: 'Dutch',
-            lastName: 'Franklin',
             email: 'dutchtheclutch@example.com',
             password: 'Password12345',
-            activities: [soccer, hockey]
+            items: ['goalie gloves', 'hockey stick']
         },
         {
             username: 'beachlady',
-            firstName: 'Sandy',
-            lastName: 'Shoreline',
             email: 'beachlady@testmail.com',
             password: 'Password12345',
-            activities: [volleyball, hiking]
+            items: ['bear spray', 'backpacking pack']
         },
         {
             username: 'maniacman',
-            firstName: 'Tommy',
-            lastName: 'Boy',
             email: 'bigguy@littlesuit.com',
             password: 'Password12345',
-            activities: [sumo, football, powerlifting]
+            items: ['sumo outfit', "football gloves", 'squat rack']
         },
         {
             username: 'wilbursfriend',
-            firstName: 'Charlotte',
-            lastName: 'Sweb',
             email: 'stickysituations@test.com',
             password: 'Password12345',
-            activities: [climbing, waterskiing]
+            items: ['climbing harness', 'waterskis']
         },
         {
             username: 'tanyerbum',
-            firstName: 'Torrie',
-            lastName: 'Tannenbaum',
             email: 'ohchristmastree@email.com',
             password: 'Password12345',
-            activities: [snowskiing, snowshoeing]
+            items: ['snowskis', 'snowshoes']
         }
     );
 
