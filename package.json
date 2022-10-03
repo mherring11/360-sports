@@ -31,6 +31,7 @@
     "apollo-server-express": "^3.10.2",
     "graphql": "^16.6.0",
     "jwt-decode": "^3.1.2",
-    "mongoose": "^6.6.2"
+    "mongoose": "^6.6.2",
+    "stripe": "^10.12.0"
   }
 }
