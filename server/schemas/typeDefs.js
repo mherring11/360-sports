@@ -27,3 +27,6 @@ const typeDefs = gql`
         items(username: String!): [Item]
         item(_id: ID!): Item
     }`
+;
+
+module.exports = typeDefs;
