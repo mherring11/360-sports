@@ -66,9 +66,8 @@ useEffect(() => {
               />
           </Route>
           <Route exact path='/checkout'>
-              <Checkout>
+              <Checkout cart={cart} />
 
-              </Checkout>
           </Route>
         </Switch>
     </div>
