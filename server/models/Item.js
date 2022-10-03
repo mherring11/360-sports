@@ -1,4 +1,5 @@
 const { model, Schema } = require('mongoose');
+const { virtuals } = require('../../../deep-thoughts/server/config/models/Reaction');
 
 const itemSchema = new Schema(
     {
@@ -13,6 +14,11 @@ const itemSchema = new Schema(
             minlength: 10,
             maxlength: 280
         },
+        condition:{
+            type: String,
+            required: true,
+            unique: false
+        },
         tags: [
             {
                 type: String,
@@ -23,7 +29,8 @@ const itemSchema = new Schema(
     },
     {
         toJSON: {
-          getters: true
+          getters: true,
+          virtuals: true
         }
       }
 );

@@ -7,40 +7,40 @@ db.once('open', async () => {
     await User.deleteMany();
     await User.create(
         {
-            username: 'Chopchop',
-            email: 'chopchopsnipsnip@landscaperpro.com',
-            password: 'Password12345',
-            items: ['football cleats', 'basketball']
+            "username": 'Chopchop',
+            "email": 'chopchopsnipsnip@landscaperpro.com',
+            "password": 'Password12345',
+            //items: ['football cleats', 'basketball']
         },
         {
-            username: 'dutchblitz',
-            email: 'dutchtheclutch@example.com',
-            password: 'Password12345',
-            items: ['goalie gloves', 'hockey stick']
+            "username": 'dutchblitz',
+            "email": 'dutchtheclutch@example.com',
+            "password": 'Password12345',
+           //items: ['goalie gloves', 'hockey stick']
         },
         {
-            username: 'beachlady',
-            email: 'beachlady@testmail.com',
-            password: 'Password12345',
-            items: ['bear spray', 'backpacking pack']
+            "username": 'beachlady',
+            "email": 'beachlady@testmail.com',
+            "password": 'Password12345',
+           //items: ['bear spray', 'backpacking pack']
         },
         {
-            username: 'maniacman',
-            email: 'bigguy@littlesuit.com',
-            password: 'Password12345',
-            items: ['sumo outfit', "football gloves", 'squat rack']
+            "username": 'maniacman',
+            "email": 'bigguy@littlesuit.com',
+            "password": 'Password12345',
+           // items: ['sumo outfit', "football gloves", 'squat rack']
         },
         {
-            username: 'wilbursfriend',
-            email: 'stickysituations@test.com',
-            password: 'Password12345',
-            items: ['climbing harness', 'waterskis']
+            "username": 'wilbursfriend',
+            "email": 'stickysituations@test.com',
+            "password": 'Password12345',
+           // items: ['climbing harness', 'waterskis']
         },
         {
-            username: 'tanyerbum',
-            email: 'ohchristmastree@email.com',
-            password: 'Password12345',
-            items: ['snowskis', 'snowshoes']
+            "username": 'tanyerbum',
+            "email": 'ohchristmastree@email.com',
+            "password": 'Password12345',
+            //items: ['snowskis', 'snowshoes']
         }
     );
 

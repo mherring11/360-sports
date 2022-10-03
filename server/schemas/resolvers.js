@@ -2,7 +2,7 @@ const { User, Item } = require('../models/index')
 
 const resolvers = {
     Query: {
-        users: async  () => {
+        users: async () => {
             return User.find()
             .select('-__v -password')
             .populate('items');
@@ -12,5 +12,33 @@ const resolvers = {
             .select('-__v -password')
             .populate('items');
         },
+        items: async () => {
+            return Item.find()
+        }
+    },
+    Mutation: {
+    addUser: async (parent, args) => {
+        const user = await User.create(args);
+
+        return user;
+    },
+    addItem: async (parent, args) => {
+        const item = await Item.create(args);
+
+        /*await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { thoughts: item._id } },
+          { new: true }
+        );*/
+
+        return item;
+    },
+    removeItem: async (parent, { _id }) => {
+        const item = await Item.findByIdAndDelete(_id)
+
+        return item
+    }
     }
 }
+
+module.exports = resolvers;
