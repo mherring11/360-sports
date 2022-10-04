@@ -1,4 +1,4 @@
-import jwtDecode from 'jwt-decode';
+import decode from 'jwt-decode';
 
 class AuthOptions {
     userLogin(idToken) {
@@ -18,12 +18,12 @@ class AuthOptions {
     }
 
     currentProfile() {
-        return jwtDecode(this.retrieveToken());
+        return decode(this.retrieveToken());
     }
 
     confirmTokenValid(token) {
         try {
-            const decoded = jwtDecode(token);
+            const decoded = decode(token);
             if (decoded.exp < Date.now() / 1000) {
                 return true;
             } else {
