@@ -3,7 +3,7 @@ dotenv.config();
 const jwt = require('jsonwebtoken');
 const expiration = '3h';
 
-function generateToken({ req }) {
+function authenticateToken({ req }) {
     let token = req.body || req.query || req.headers.authorization;
 
     if (req.headers.authorization) {
@@ -24,10 +24,10 @@ function generateToken({ req }) {
     return req;
 }
 
-function signToken({ email, _id }) {
+function generateToken({ email, _id }) {
     const payload = { email, _id };
 
     return jwt.sign({ data: payload }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: expiration });
 }
 
-module.exports = { generateToken, signToken };
+module.exports = { generateToken, authenticateToken };
