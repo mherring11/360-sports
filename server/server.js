@@ -10,9 +10,8 @@ const app = express();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: generateToken
+    //context: generateToken
 });
-
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

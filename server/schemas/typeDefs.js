@@ -18,16 +18,17 @@ const typeDefs = gql`
     }
     
     type Query {
+        me: User
         users: [User]
         user(username: String!): User
         items: [Item]
         item(_id: ID!): Item
         itemsByTag(tags: [String]!): [Item]
-        itemsByUser(): [Item]
     }
     
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): User
+        login(email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         addItem(itemName: String!, description: String!, condition: String!, tags: [String!]): Item
         removeItem(_id: ID!): Item
     }`
