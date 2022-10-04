@@ -14,7 +14,10 @@ const resolvers = {
         },
         items: async () => {
             return Item.find()
-        }
+        },
+        itembyTag: async (parent, {tags}) => {
+           return Item.find({tags});
+        },
     },
     Mutation: {
     addUser: async (parent, args) => {
@@ -27,12 +30,13 @@ const resolvers = {
 
         /*await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $push: { thoughts: item._id } },
+          { $push: { items: item._id } },
           { new: true }
         );*/
 
         return item;
     },
+
     removeItem: async (parent, { _id }) => {
         const item = await Item.findByIdAndDelete(_id)
 

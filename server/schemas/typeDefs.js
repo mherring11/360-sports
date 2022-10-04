@@ -26,6 +26,7 @@ const typeDefs = gql`
         user(username: String!): User
         items: [Item]
         item(_id: ID!): Item
+        itembyTag(tags: [String]!): [Item]
     }
     
     type Mutation {
