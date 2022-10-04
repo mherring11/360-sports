@@ -6,6 +6,7 @@ const typeDefs = gql`
         username: String
         email: String
         items: [Item]
+        cart: [Item]
     }
     
     type Item {
@@ -16,17 +17,13 @@ const typeDefs = gql`
         tags: [String]
     }
     
-    type Tag {
-        _id: ID
-        sport: String
-    }
-    
     type Query {
         users: [User]
         user(username: String!): User
         items: [Item]
         item(_id: ID!): Item
-        itembyTag(tags: [String]!): [Item]
+        itemsByTag(tags: [String]!): [Item]
+        itemsByUser(): [Item]
     }
     
     type Mutation {
