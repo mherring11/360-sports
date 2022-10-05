@@ -6,21 +6,21 @@
   "scripts": {
     "start": "node server.js",
     "seed": "node config/seeds.js",
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "watch": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^2.11.0",
-    "express": "^4.18.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.7",
+    "apollo-server-express": "^3.6.1",
     "bcrypt": "^5.0.1",
-    "graphql": "^15.5.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "graphql": "^16.2.0",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.10.0",
-    "dotenv": "^16.0.3"
-    
+    "mongoose": "^5.9.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

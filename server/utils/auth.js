@@ -4,10 +4,10 @@ const jwt = require('jsonwebtoken');
 const expiration = '3h';
 
 function generateToken({ req }) {
-    let token = req.body || req.query || req.headers.authorization;
+    let token = req.body.token || req.query.token || req.headers.authorization;
 
     if (req.headers.authorization) {
-        token = token.split(' ').pop().trim();
+        token = token.split(" ").pop().trim();
       }
   
       if (!token) {

@@ -13,6 +13,10 @@ const itemSchema = new Schema(
             minlength: 10,
             maxlength: 280
         },
+        username: {
+            type: String,
+            require: "true"
+        },
         tags: [
             {
                 type: String,
