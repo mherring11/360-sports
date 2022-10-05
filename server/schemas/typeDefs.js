@@ -13,7 +13,6 @@ const typeDefs = gql`
         _id: ID
         itemName: String
         description: String
-        Condition: String
         username: String
         tags: [String]
     }
