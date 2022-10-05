@@ -7,7 +7,7 @@ function authenticateToken({ req }) {
     let token = req.body || req.query || req.headers.authorization;
 
     if (req.headers.authorization) {
-        token = token.split(' ').pop().trim();
+        token = token.split(" ").pop().trim();
       }
   
       if (!token) {
