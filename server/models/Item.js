@@ -20,7 +20,7 @@ const itemSchema = new Schema(
         tags: [
             {
                 type: String,
-                required: 'Please add atleast one tag',
+                required: 'Please add at least one tag',
                 maxlength: 30
             }
         ]

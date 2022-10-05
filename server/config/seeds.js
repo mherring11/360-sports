@@ -3,50 +3,8 @@ const { Item, User } = require('../models');
 
 db.once('open', async () => {
 
-    await User.deleteMany();
-    await User.create(
-        {
-            username: 'Chopchop',
-            email: 'chopchopsnipsnip@landscaperpro.com',
-            password: 'Password12345',
-            items: []
-        },
-        {
-            username: 'dutchblitz',
-            email: 'dutchtheclutch@example.com',
-            password: 'Password12345',
-            items: []
-        },
-        {
-            username: 'beachlady',
-            email: 'beachlady@testmail.com',
-            password: 'Password12345',
-            items: []
-        },
-        {
-            username: 'maniacman',
-            email: 'bigguy@littlesuit.com',
-            password: 'Password12345',
-            items: []
-        },
-        {
-            username: 'wilbursfriend',
-            email: 'stickysituations@test.com',
-            password: 'Password12345',
-            items: []
-        },
-        {
-            username: 'tanyerbum',
-            email: 'ohchristmastree@email.com',
-            password: 'Password12345',
-            items: []
-        }
-    );
-
-    console.log('users seeded');
-
     await Item.deleteMany();
-    const items = await Item.create(
+    const items = await Item.create([
         {
             itemName: 'football cleats',
             description: "These are almost brand new.  I bought them when I started playing in a rec football league but I quickly realized I'm too old for this...",
@@ -119,9 +77,51 @@ db.once('open', async () => {
             username: 'tanyerbum',
             tags: ['snowsports', 'crosscountry skiing']
         }
-    )
+    ])
 
     console.log('Item seeded')
+
+    await User.deleteMany();
+    await User.create(
+        {
+            username: 'Chopchop',
+            email: 'chopchopsnipsnip@landscaperpro.com',
+            password: 'Password12345',
+            items: [items[0]._id, items[1]._id]
+        },
+        {
+            username: 'dutchblitz',
+            email: 'dutchtheclutch@example.com',
+            password: 'Password12345',
+            items: [items[2]._id, items[3]._id]
+        },
+        {
+            username: 'beachlady',
+            email: 'beachlady@testmail.com',
+            password: 'Password12345',
+            items: [items[4]._id, items[5]._id]
+        },
+        {
+            username: 'maniacman',
+            email: 'bigguy@littlesuit.com',
+            password: 'Password12345',
+            items: [items[6]._id]
+        },
+        {
+            username: 'wilbursfriend',
+            email: 'stickysituations@test.com',
+            password: 'Password12345',
+            items: [items[7]._id, items[8]._id]
+        },
+        {
+            username: 'tanyerbum',
+            email: 'ohchristmastree@email.com',
+            password: 'Password12345',
+            items: [items[9]._id, items[10]._id]
+        }
+    );
+
+    console.log('User seeded');
 
     process.exit();
 });
