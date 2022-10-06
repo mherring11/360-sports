@@ -1,6 +1,6 @@
 # 360 Sports
 
-![Github license](http://img.shields.io/badge/icense-MIT-blue.svg)
+![Github license](http://img.shields.io/badge/License-MIT-blue.svg)
 
 ## Description
 
