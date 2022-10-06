@@ -10,6 +10,8 @@ Just like a 360 dunk, 360 Sports is sure to get users out of their seats and on 
 
 - [Installation](#installation)
 - [Screenshot](#screenshot)
+- [Deployed Application](#deployed application)
+- [Github Repo](#github repo)
 - [License](#license)
 - [Contributing](#contributing)
 
