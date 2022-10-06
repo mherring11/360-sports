@@ -25,14 +25,14 @@ const AddressForm = ({ checkoutToken}, next ) => {
         const { countries } = await commerce.services.localeListShippingCountries(checkoutTokeId);
 
         setShippingCountries(countries);
-        setShippingCountry(object.keys(countries)[0]);
+        setShippingCountry(Object.keys(countries)[0]);
     }
 
     const fetchSubdivisions = async (countryCode) => {
         const { subdivisions } = await commerce.services.localeListShippingSubdivisions(countryCode);
 
         setShippingSubdivisions(countries);
-        setShippingSubdivision(object.keys(subdivisions)[0]);
+        setShippingSubdivision(Object.keys(subdivisions)[0]);
     }
 
     const fecthShippingOptions = async (checkoutTokenId,country, region = null) => {
