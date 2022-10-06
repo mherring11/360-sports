@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Button, Divider } from '@material-ui/core';
-import { Elements, CardElement, ElementsConsumer, CardElement } from '@stripe/react-stripe-js';
+import { Elements, CardElement, ElementsConsumer } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
 import Review from './Review';
@@ -15,20 +15,20 @@ const PaymentForm = ({ checkoutToken, backstep }) => {
 
     const CardElement = elements.getElement(CardElement);
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: CardElement });
+    const { error, paymentMethod } = stripe.createPaymentMethod({ type: 'card', card: CardElement });
 
     if(error) {
 
     } else {
         const orderData = {
-            line_itmes: checkoutToken.live.line_itmes,
+            line_items: checkoutToken.live.line_items,
             customer: { firstname: shippingData.firstname, lastname: shippingData.lastname, email: shippingData.email },
             shipping: { 
               name: 'Primary', 
               street: shippingData.address1, 
-              town_city: shippingData.city
-              county_state:shippingData.shippingSubdivision,
-              postal_zip_code: shippingData.zip
+              town_city: shippingData.city,
+              county_state: shippingData.shippingSubdivision,
+              postal_zip_code: shippingData.zip,
               country: shippingData.shippingcountry, 
             },
             fullfillment: { shipping_method: shippingData.shippingOption },
