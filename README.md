@@ -10,6 +10,8 @@ Just like a 360 dunk, 360 Sports is sure to get users out of their seats and on 
 
 - [Installation](#installation)
 - [Screenshot](#screenshot)
+- [Deployed Application](#deployedapplication)
+- [Github Repo](#githubrepo)
 - [License](#license)
 - [Contributing](#contributing)
 
@@ -19,6 +21,12 @@ No steps required, just click on our [heroku link](https://git.heroku.com/o360-s
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/96882225/194430090-c7bb4ee7-213c-4e93-922e-fe50ac4fb56e.png)
+
+## Deployed Application
+[https://o360-sports.herokuapp.com/](https://o360-sports.herokuapp.com/)
+
+## Github Repo
+[https://github.com/mherring11/360-sports](https://github.com/mherring11/360-sports)
 
 ## License
 
