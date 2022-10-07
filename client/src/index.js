@@ -1,3 +1,15 @@
+/*
+    index.js
+    Micheal Herring
+    Documented on 10/06/2022
+    
+    Description:
+      This file is the entry point for the React application. It is the first file that is loaded when the application is started.
+    
+    Documentation:
+        No documentation provided.
+*/
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
@@ -9,6 +21,7 @@ import store from './redux/store';
 
 import { Home, Product, Products, AboutPage, ContactPage, Cart, Login, Register, Checkout, PageNotFound } from "./pages"
 
+// Render the application to the DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

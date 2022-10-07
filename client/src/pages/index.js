@@ -1,3 +1,15 @@
+/*
+    index.js
+    Micheal Herring
+    Documented on 10/06/2022
+    
+    Description:
+        This file initializes the Redux store routes
+    
+    Documentation:
+        No documentation provided.
+*/
+
 export { default as Home } from './Home';
 export { default as Products } from './Products';
 export { default as Product } from './Product';

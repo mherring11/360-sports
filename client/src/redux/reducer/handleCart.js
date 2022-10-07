@@ -1,3 +1,11 @@
+/*
+    handleCart.js
+    Micheal Herring
+    Documented on 10/06/2022
+    
+    Description:
+        This file holds the Redux reducer for the cart.
+*/
 const cart = []
 
 const handleCart = (state=cart, action) =>{

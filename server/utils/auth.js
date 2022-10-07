@@ -1,3 +1,15 @@
+/*
+    auth.js
+    Strider
+    Documented on 10/06/2022
+    
+    Description:
+      Handles the authentication of the user.
+    
+    Documentation:
+      No documentation provided.
+*/
+
 const dotenv = require('dotenv');
 dotenv.config();
 const jwt = require('jsonwebtoken');

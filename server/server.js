@@ -1,3 +1,15 @@
+/*
+    server.js
+    Strider
+    Documented on 10/06/2022
+    
+    Description:
+      This file initializes the Apollo/express server
+    
+    Documentation:
+      No documentation provided.
+*/
+
 const express = require("express");
 const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
@@ -40,5 +52,5 @@ const startApolloServer = async (typeDefs, resolvers) => {
   })
 };
     
-    // Call the async function to start the server
-    startApolloServer(typeDefs, resolvers);
+// Call the async function to start the server
+startApolloServer(typeDefs, resolvers);
