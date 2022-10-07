@@ -20,7 +20,7 @@ Just like a 360 dunk, 360 Sports is sure to get users out of their seats and on 
 No steps required, just click on our [heroku link](https://git.heroku.com/o360-sports.git)!
 
 ## Screenshot
-![image](https://user-images.githubusercontent.com/96882225/194439457-4b403ce3-229a-4517-ba02-4698ef364d1a.png)
+![image](https://user-images.githubusercontent.com/96882225/194457694-45018b3e-b36f-477b-b9ad-05e3c45fba5f.png)
 
 
 ## Deployed Application
